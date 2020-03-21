@@ -1,0 +1,20 @@
+version: '2.0'
+services:
+  nginx:
+    container_name: app_nginx
+    image: nginx:alpine
+    ports:
+    - "8080:80"
+    networks:
+    - app_network
+  server:
+    container_name: app_server
+    build: .
+    image: edgejay/docker-nodejs-app
+    ports:
+    - "3004:3004"
+    networks:
+    - app_network
+networks:
+  app_network:
+    driver: bridge

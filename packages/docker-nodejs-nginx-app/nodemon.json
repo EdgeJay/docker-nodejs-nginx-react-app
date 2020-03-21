@@ -1,0 +1,15 @@
+{
+  "verbose": true,
+  "ignore": [
+    "src/*",
+    "__tests__",
+    "node_modules/*"
+  ],
+  "watch": [
+    "dist/*"
+  ],
+  "execMap": {
+    "js": "node -r esm --inspect"
+  },
+  "ext": "js json"
+}

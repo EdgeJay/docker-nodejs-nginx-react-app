@@ -1,0 +1,64 @@
+{
+  "name": "docker-nodejs-nginx-app",
+  "version": "0.1.0",
+  "description": "Simple app to demonstrate using Docker to deploy Node.js app together with Nginx",
+  "main": "dist/index.js",
+  "engines": {
+    "node": "12.16.1"
+  },
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "lint": "eslint \"./src/**/*.ts\"",
+    "dev": "concurrently \"tsc --watch\" \"nodemon -L | pino-pretty\"",
+    "dev:test": "tsc --watch",
+    "start": "node -r esm ./dist/index.js",
+    "test": "tsc && ava --verbose --config ./ava.config.js",
+    "build": "yarn run clean && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdgeJay/docker-nodejs-nginx-app.git"
+  },
+  "keywords": [
+    "node.js",
+    "typescript",
+    "koa",
+    "nginx",
+    "docker"
+  ],
+  "author": "Wu Huijie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EdgeJay/docker-nodejs-nginx-app/issues"
+  },
+  "homepage": "https://github.com/EdgeJay/docker-nodejs-nginx-app#readme",
+  "dependencies": {
+    "@koa/router": "^8.0.8",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "find-config": "^1.0.0",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-pino-logger": "^2.1.3"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.11.2",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-pino-logger": "^2.1.6",
+    "@types/koa__router": "^8.0.2",
+    "@types/sinon": "^7.5.2",
+    "ava": "^3.5.0",
+    "concurrently": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "nodemon": "^2.0.2",
+    "pino-pretty": "^3.6.1",
+    "prettier": "^1.19.1",
+    "sinon": "^9.0.1",
+    "typescript": "^3.8.3"
+  }
+}
