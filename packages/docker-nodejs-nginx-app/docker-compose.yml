@@ -12,8 +12,6 @@ services:
     container_name: app_server
     build: .
     image: edgejay/docker-nodejs-app
-    ports:
-    - "3004:3004"
     networks:
     - app_network
 networks:
