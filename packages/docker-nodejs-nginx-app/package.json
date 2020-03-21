@@ -13,7 +13,8 @@
     "dev:test": "tsc --watch",
     "start": "node -r esm ./dist/index.js",
     "test": "tsc && ava --verbose --config ./ava.config.js",
-    "build": "yarn run clean && tsc"
+    "build": "yarn run clean && tsc",
+    "docker:build": "docker build -t edgejay/docker-nodejs-app ."
   },
   "repository": {
     "type": "git",
@@ -39,7 +40,8 @@
     "find-config": "^1.0.0",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.2.1",
-    "koa-pino-logger": "^2.1.3"
+    "koa-pino-logger": "^2.1.3",
+    "uuid": "^7.0.2"
   },
   "devDependencies": {
     "@types/koa": "^2.11.2",
@@ -47,6 +49,7 @@
     "@types/koa-pino-logger": "^2.1.6",
     "@types/koa__router": "^8.0.2",
     "@types/sinon": "^7.5.2",
+    "@types/uuid": "^7.0.2",
     "ava": "^3.5.0",
     "concurrently": "^5.1.0",
     "eslint": "^6.8.0",

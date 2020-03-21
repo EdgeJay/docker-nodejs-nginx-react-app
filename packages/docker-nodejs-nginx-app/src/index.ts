@@ -1,8 +1,13 @@
 import Koa from 'koa';
 import { initDotEnv, getNodePort } from './core/env';
+import { initLogger } from './core/logger';
+import { initRoutes } from './core/routes';
 
 function start(): void {
   const app = new Koa();
+
+  // init logging
+  initLogger(app);
 
   // fetch and setup dotenv vars
   const env = initDotEnv();
@@ -15,11 +20,7 @@ function start(): void {
      * with process.env.
      */
 
-    // initRoutes(app);
-
-    app.use(ctx => {
-      ctx.body = 'Hello world!';
-    });
+    initRoutes(app);
 
     const port = getNodePort(env);
     app.listen(port, (): void => {
