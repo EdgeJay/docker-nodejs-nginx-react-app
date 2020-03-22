@@ -14,7 +14,10 @@
     "start": "node -r esm ./dist/index.js",
     "test": "tsc && ava --verbose --config ./ava.config.js",
     "build": "yarn run clean && tsc",
-    "docker:build": "docker build -t edgejay/docker-nodejs-app ."
+    "docker:build": "docker build -t edgejay/docker-nodejs-app .",
+    "docker:build-all": "docker-compose build",
+    "docker:deploy": "docker-compose up -d",
+    "docker:run": "docker run -d --rm -p 3004:3004 --name app_server_standalone edgejay/docker-nodejs-app"
   },
   "repository": {
     "type": "git",
