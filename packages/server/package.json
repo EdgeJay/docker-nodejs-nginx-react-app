@@ -1,7 +1,7 @@
 {
-  "name": "docker-nodejs-nginx-app",
+  "name": "@dnnra/server",
   "version": "0.1.0",
-  "description": "Simple app to demonstrate using Docker to deploy Node.js app together with Nginx",
+  "description": "Server app component of docker-nodejs-nginx-react-app",
   "main": "dist/index.js",
   "engines": {
     "node": "12.16.1"

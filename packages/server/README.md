@@ -1,5 +1,8 @@
-# docker-nodejs-nginx-app
-Simple app to demonstrate using Docker to deploy Node.js app together with Nginx
+# docker-nodejs-nginx-react-app/server
+
+Server app component of docker-nodejs-nginx-react-app
+
+Cloned from [docker-nodejs-nginx-app](https://github.com/EdgeJay/docker-nodejs-nginx-app)
 
 ## Getting Started
 
