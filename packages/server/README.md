@@ -34,10 +34,10 @@ In this setup, server app is running as a standalone Docker container and expose
 
 ### Other scripts
 
-#### yarn run docker:build
+### yarn run docker:build
 
 Re-build server app Docker image
 
-#### yarn run docker:build-all
+### yarn run docker:run
 
-Re-build all images
+Deploy and run container from server app Docker image
