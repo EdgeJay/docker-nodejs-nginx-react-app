@@ -20,6 +20,6 @@ COPY --from=base /var/www/server/yarn.lock ./yarn.lock
 
 RUN yarn install --production
 
-EXPOSE 3004
+EXPOSE 4000
 
 CMD ["node", "-r", "esm", "./dist/index.js"]

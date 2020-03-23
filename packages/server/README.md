@@ -8,14 +8,14 @@ Cloned from [docker-nodejs-nginx-app](https://github.com/EdgeJay/docker-nodejs-n
 
 ### Install dependencies
 
-1. `touch .env && echo "NODE_PORT=3004" > ./.env`
+1. `touch .env && echo "NODE_PORT=4000" > ./.env`
 2. `yarn install`
 
 ### Start server in development mode
 
 `yarn run dev`
 
-Open http://localhost:3004/api/hello
+Open http://localhost:4000/api/hello
 
 ### Deploy server as via Docker compose
 
@@ -27,7 +27,7 @@ Open http://localhost:8080/api/hello
 
 ### Deploy server as standalone Docker container
 
-In this setup, server app is running as a standalone Docker container and exposes port 3004 to Docker host.
+In this setup, server app is running as a standalone Docker container and exposes port 4000 to Docker host.
 
 `yarn run docker:build`
 `yarn run docker:run`

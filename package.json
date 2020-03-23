@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "description": "Simple lerna-managed app to demonstrate using Docker to deploy React frontend, Node.js backend app with Nginx",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "lerna run lint",
+    "test": "lerna run test",
+    "build": "lerna run build",
+    "docker:build-all": "docker-compose build",
+    "docker:deploy": "docker-compose up -d",
+    "docker:dispose": "docker-compose down"
   },
   "repository": {
     "type": "git",

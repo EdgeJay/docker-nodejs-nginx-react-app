@@ -1,0 +1,19 @@
+version: '2.0'
+services:
+  nginx:
+    container_name: dnnra_nginx
+    build: ./nginx
+    image: edgejay/dnnra-nginx
+    ports:
+    - "8080:80"
+    networks:
+    - dnnra_network
+  server:
+    container_name: dnnra_server
+    build: ./packages/server
+    image: edgejay/dnnra-server
+    networks:
+    - dnnra_network
+networks:
+  dnnra_network:
+    driver: bridge
