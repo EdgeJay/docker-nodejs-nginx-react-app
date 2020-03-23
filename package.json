@@ -1,0 +1,35 @@
+{
+  "name": "docker-nodejs-nginx-react-app",
+  "version": "0.1.0",
+  "description": "Simple lerna-managed app to demonstrate using Docker to deploy React frontend, Node.js backend app with Nginx",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdgeJay/docker-nodejs-nginx-react-app.git"
+  },
+  "keywords": [
+    "lerna",
+    "node.js",
+    "node",
+    "typescript",
+    "react",
+    "koa",
+    "nginx",
+    "docker"
+  ],
+  "author": "Wu Huijie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EdgeJay/docker-nodejs-nginx-react-app/issues"
+  },
+  "homepage": "https://github.com/EdgeJay/docker-nodejs-nginx-react-app#readme",
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
