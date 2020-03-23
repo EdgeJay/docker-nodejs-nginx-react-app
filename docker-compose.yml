@@ -8,7 +8,9 @@ services:
     - dnnra_network
   nginx:
     container_name: dnnra_nginx
-    build: ./nginx
+    build:
+      context: .
+      dockerfile: nginx.Dockerfile
     image: edgejay/dnnra-nginx
     ports:
     - "8080:80"
