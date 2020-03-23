@@ -31,5 +31,10 @@ In this setup, server app is running as a standalone Docker container and expose
 
 ### Other scripts
 
-`yarn run docker:build` : Re-build server app Docker image
-`yarn run docker:build-all` : Re-build all images
+#### yarn run docker:build
+
+Re-build server app Docker image
+
+#### yarn run docker:build-all
+
+Re-build all images
